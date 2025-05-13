@@ -30,3 +30,6 @@ Download it and unzip the four files in the `assets` folder.
 ```
 The results will be saved in the `output` folder.
 
+## TODO
+- [ ] Add the global face editing code
+- [ ] Add the reigional face editing code
