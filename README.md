@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Data
 Download the data from FLAME official website: https://flame.is.tue.mpg.de/, please require a proper license to use the data.
-For academic testing purpose, I compressed the necessary pretrained models in the Google Drive.
+For academic testing purpose, I compressed the necessary pretrained models in the [Google Drive](https://drive.google.com/drive/folders/1gZQISBh42dOHI559VD3XfnvR4Wz1N80v?usp=sharing).
 Download it and unzip the four files in the `assets` folder.
 
 ## Run the code
@@ -31,5 +31,6 @@ Download it and unzip the four files in the `assets` folder.
 The results will be saved in the `output` folder.
 
 ## TODO
+- [ ] Add the stable diffusion code for generating the face images
 - [ ] Add the global face editing code
 - [ ] Add the reigional face editing code
