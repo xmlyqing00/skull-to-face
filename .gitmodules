@@ -1,0 +1,3 @@
+[submodule "DECA"]
+	path = DECA
+	url = git@github.com:xmlyqing00/DECA.git

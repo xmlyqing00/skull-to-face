@@ -1,0 +1,61 @@
+exp_name: "Reconstruct King Face"
+pretrained: None
+
+renderer:
+  topology_path: "DECA/data/head_template.obj"
+  uv_size: 256
+  rasterizer_type: "pytorch3d"
+  image_size: 224
+
+train:
+  gan: True
+  log_steps: 400
+  scale_lmk: 1e3  #1e4
+  scale_chamfer: 2e2
+  scale_codedelta: 1e-2
+  scale_sym: 1e3 # 2e2
+  delta_norm_scale: 0
+  g_gen_scale: 10  #10
+  max_epochs: 1000
+  resume_steps: False
+  D_lr: 1e-3
+  G_lr: 1e-2
+  log_dir: "train/"
+  lr_milestones: [200, 400, 600, 800]
+  vis_num: 2
+  seed: 2025
+  drop_last: True
+
+val:
+  log_steps: 10
+  drop_last: True
+
+model:
+  generator:
+    lmk_len: 234  # 78 * 3 = 234
+    shape_len: 156  # shape 100, exp 50, pose 6
+    hidden_channel: [256, 256, 256]
+  discriminator: 
+    channels: [2048]
+
+dataset:
+  batch_size: 2
+  pin_memory: False
+  num_workers: 2
+  keep_exp: True
+  keep_pose: False
+  use_lmk_gt: True
+  force_reconstruct: False
+
+  lmk_depth_pca_model: "assets/lmk_depth_pca100.pkl"
+  lmks_dict_path: "assets/lmks_dict.npy"
+
+  lmk_path: "assets/deca_lmk_ids2.json"
+  dense_face_fids_path: "assets/dense_face_fids2.npy"
+
+  skull_dir: "assets/king/"
+  skull_name: "skull.ply"
+
+  face_img_dir: "assets/king/"
+  face_names: ["king_face.png"]
+  face_deca_dir: "./experiments/king/"

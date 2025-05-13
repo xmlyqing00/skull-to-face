@@ -1,0 +1,11 @@
+deca_model.tar
+FLAME_texture.npz
+generic_model.pkl
+resnet50_ft_weight.pkl
+
+__pycache__/
+.vscode/
+experiments/
+output/
+
+*.zip

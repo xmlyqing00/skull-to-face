@@ -1,0 +1,16 @@
+trimesh
+loguru
+scikit-image
+opencv-python
+PyYAML
+face-alignment
+yacs
+kornia
+ninja
+fvcore
+torchfile
+pysdf
+matplotlib
+chumpy==0.70
+numpy==1.23.5
+scikit-learn
